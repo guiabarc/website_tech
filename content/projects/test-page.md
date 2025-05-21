@@ -1,7 +1,7 @@
 ---
 title: Test Page
 weight: 10 # Adjust weight as needed to order under Projects
-description: "This very website, built with Hugo and the hugo-book theme."
+description: "Test page to check Markdown rendering."
 image: "/images/projects/website-cover.jpg" # Placeholder, replace with your actual image path
 ---
 
