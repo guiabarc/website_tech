@@ -1,6 +1,6 @@
 baseURL = 'https://guiabarc.github.io/website_tech/' # Or your custom domain later
 languageCode = 'en-us' # Or your preferred language
-title = 'My Tech Guide' # Or your desired website title
+title = 'Guilherme Barcelos' # Or your desired website title
 theme = 'hugo-book'
 
 # Hugo-Book theme specific configurations can be added here
