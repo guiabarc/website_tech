@@ -1,0 +1,12 @@
+baseURL = 'https://guiabarc.github.io/website_tech/' # Or your custom domain later
+languageCode = 'en-us' # Or your preferred language
+title = 'My Tech Guide' # Or your desired website title
+theme = 'hugo-book'
+
+# Hugo-Book theme specific configurations can be added here
+# Check the theme's documentation for available options
+[params]
+  BookTheme = 'auto' # or 'light' or 'dark'
+  # BookRepo = 'https://github.com/guiabarc/website_tech/' # Link to your repo
+  # BookEditPath = 'edit/main/content' # If you want an "Edit this page" link
+
