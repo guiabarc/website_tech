@@ -7,6 +7,7 @@ theme = 'hugo-book'
 # Check the theme's documentation for available options
 [params]
   BookTheme = 'auto' # or 'light' or 'dark'
+  BookSection = "/" # Use root content for menu
   # BookRepo = 'https://github.com/guiabarc/website_tech/' # Link to your repo
   # BookEditPath = 'edit/main/content' # If you want an "Edit this page" link
 

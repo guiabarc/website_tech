@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Tech Guide</title>
+    <title>Home on My Tech Guide</title>
     <link>http://localhost:1313/website_tech/</link>
-    <description>Recent content on My Tech Guide</description>
+    <description>Recent content in Home on My Tech Guide</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/website_tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Website</title>
+      <link>http://localhost:1313/website_tech/projects/website/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/website_tech/projects/website/</guid>
+      <description>&lt;h1 id=&#34;project-website&#34;&gt;&#xA;  Project: Website&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#project-website&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Details about this website project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/website_tech/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/website_tech/about/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;&#xA;  About Me&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#about-me&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Some information about me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CV</title>
+      <link>http://localhost:1313/website_tech/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/website_tech/cv/</guid>
+      <description>&lt;h1 id=&#34;cv&#34;&gt;&#xA;  CV&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cv&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;My curriculum vitae.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

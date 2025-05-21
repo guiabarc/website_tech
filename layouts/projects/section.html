@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <article class="markdown">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+
+  <h2>Available Projects:</h2>
+  <div class="project-cards-container">
+    {{ range .RegularPages.ByWeight }} {{/* Or .Pages.ByDate.Reverse, .Pages.ByTitle etc. */}}
+      {{ $projectPage := . }} {{/* Store current page context */}}
+      <div class="project-card">
+        {{ with $projectPage.Params.image }} {{/* Use variable for Params */}}
+          <img src="{{ . | relURL }}" alt="{{ $projectPage.Title }} cover image" class="project-card-image"> {{/* Use variable for Title */}}
+        {{ end }}
+        <div class="project-card-content">
+          <h3><a href="{{ $projectPage.RelPermalink }}">{{ $projectPage.Title }}</a></h3> {{/* Use variable */}}
+          {{ with $projectPage.Params.description }} {{/* Use variable for Params */}}
+            <p>{{ . }}</p> {{/* '.' is the description string here, which is correct */}}
+          {{ else }}
+            <p>{{ $projectPage.Summary }}</p> {{/* Fallback to summary, use variable */}}
+          {{ end }}
+          <a href="{{ $projectPage.RelPermalink }}" class="project-card-readmore">Read More &rarr;</a> {{/* Use variable */}}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }} 

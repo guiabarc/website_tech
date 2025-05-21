@@ -1,0 +1,117 @@
+// Import custom color definitions
+@import "my_theme_colors";
+
+// You can add other custom SCSS rules below if needed 
+
+// --- Gruvbox Dark Hard SCSS Variable Definitions ---
+// From gruvbox.md
+
+// I. Background Colors
+$gruvbox-bg-hard: #1d2021;
+$gruvbox-bg-medium: #282828;
+$gruvbox-bg-soft: #32302f;
+$gruvbox-bg1: #3c3836;
+$gruvbox-bg2: #504945;
+$gruvbox-bg3: #665c54;
+$gruvbox-bg4: #7c6f64;
+
+// II. Foreground Colors
+$gruvbox-fg-primary: #fbf1c7;
+$gruvbox-fg-bright: #ebdbb2;
+$gruvbox-fg-muted: #d5c4a1;
+$gruvbox-fg-dim: #bdae93;
+$gruvbox-fg-dark: #a89984;
+
+// III. Accent Colors - Strong
+$gruvbox-red-strong: #fb4934;
+$gruvbox-green-strong: #b8bb26;
+$gruvbox-yellow-strong: #fabd2f;
+$gruvbox-blue-strong: #83a598;
+$gruvbox-purple-strong: #d3869b;
+$gruvbox-aqua-strong: #8ec07c;
+$gruvbox-orange-strong: #fe8019;
+
+// III. Accent Colors - Muted
+$gruvbox-red-muted: #cc241d;
+$gruvbox-green-muted: #98971a;
+$gruvbox-yellow-muted: #d79921;
+$gruvbox-blue-muted: #458588;
+$gruvbox-purple-muted: #b16286;
+$gruvbox-aqua-muted: #689d6a;
+$gruvbox-orange-muted: #d65d0e;
+
+// IV. Neutral Grey Tones (some are aliases to backgrounds/foregrounds)
+$gruvbox-grey-darkest: $gruvbox-bg-hard;
+$gruvbox-grey-dark: $gruvbox-bg-medium;
+$gruvbox-grey-medium-dark: $gruvbox-bg1;
+$gruvbox-grey-medium: $gruvbox-bg2;
+$gruvbox-grey-light-medium: $gruvbox-bg3;
+$gruvbox-grey-light: $gruvbox-bg4;
+$gruvbox-grey-lighter: #928374;
+$gruvbox-grey-off-white: $gruvbox-fg-dark;
+// --- End of Gruvbox SCSS Variable Definitions ---
+
+
+// --- Override HugoBook CSS Custom Properties for Dark Theme using Gruvbox SASS Variables ---
+:root[data-theme="dark"] {
+  // Body & General Text
+  --body-background: #{$gruvbox-bg-hard};
+  --body-font-color: #{$gruvbox-fg-primary};
+
+  // UI Grays (mapping to HugoBook's gray scale)
+  --gray-100: #{$gruvbox-bg-medium};     // For slightly lighter BG areas, cards, etc.
+  --gray-200: #{$gruvbox-bg1};          // For elements like modal headers, footers
+  --gray-500: #{$gruvbox-bg2};          // For hover states, input field BGs, borders
+
+  // Links
+  --color-link: #{$gruvbox-blue-strong};
+  --color-visited-link: #{$gruvbox-purple-muted}; // Or $gruvbox-purple-strong for more pop
+
+  // Hint colors (alerts, blockquotes)
+  --hint-color-info: #{$gruvbox-blue-strong};
+  --hint-color-warning: #{$gruvbox-yellow-strong};
+  --hint-color-danger: #{$gruvbox-red-strong};
+
+  // Icons (theme default is brightness(0) invert(1) which makes them white on dark)
+  // You can customize if needed, e.g., using a Gruvbox foreground color.
+  // --icon-filter: none; // if you want to color icons with a foreground color like:
+  // color: $gruvbox-fg-muted; // (This would require specific selectors for icons)
+
+  // Additional custom properties defined for convenience or for elements not covered by theme vars
+  --my-custom-primary-accent: #{$gruvbox-orange-strong};
+  --my-custom-secondary-accent: #{$gruvbox-green-strong};
+  --my-custom-code-background: #{$gruvbox-bg1};
+  --my-custom-code-foreground: #{$gruvbox-fg-muted};
+  --my-custom-border-color: #{$gruvbox-bg3};
+  --my-custom-emphasized-text: #{$gruvbox-fg-bright};
+  --my-custom-muted-text: #{$gruvbox-fg-dim};
+}
+// --- End of HugoBook CSS Custom Property Overrides ---
+
+
+// --- Additional Custom Styles using Gruvbox Variables (Step 4) ---
+// Apply specific Gruvbox aesthetics to elements if needed.
+// :root[data-theme="dark"] {
+//   body {
+//     // The --body-background override above should handle this.
+//     // If extremely stubborn, use: background-color: $gruvbox-bg-hard !important;
+//   }
+
+//   a {
+//     // The --color-link override should handle this.
+//     // color: $gruvbox-blue-strong; // or var(--color-link)
+//     &:hover {
+//       color: $gruvbox-aqua-strong; // A distinct hover color
+//     }
+//   }
+
+//   // Example for code blocks (if not covered by Chroma or theme variables)
+//   pre, code {
+//     background-color: var(--my-custom-code-background, $gruvbox-bg1);
+//     color: var(--my-custom-code-foreground, $gruvbox-fg-muted);
+//   }
+// }
+// --- End of Additional Custom Styles ---
+
+// Note: The file 'assets/scss/_my_theme_colors.scss' is now redundant
+// as its functionality is incorporated here. It can be deleted. 
