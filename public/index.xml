@@ -2,38 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Guilherme Barcelos</title>
-    <link>http://localhost:1313/website_tech/</link>
+    <link>http://localhost:38073/</link>
     <description>Recent content in Home on Guilherme Barcelos</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/website_tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:38073/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CV</title>
+      <link>http://localhost:38073/cv/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:38073/cv/</guid>
+      <description>&lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt;&#xA;&lt;head&gt;&#xA;    &lt;meta charset=&#34;UTF-8&#34;&gt;&#xA;    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;&#xA;    &lt;style&gt;&#xA;        /* You can put page-specific CSS here if absolutely necessary,&#xA;           but it&#39;s better to use your global custom.scss for maintainability. */&#xA;        .cv-container {&#xA;            font-family: Arial, sans-serif;&#xA;            /* Add more specific CV styles here or in your custom.scss */&#xA;        }&#xA;        .cv-section {&#xA;            margin-bottom: 20px;&#xA;            border-bottom: 1px solid #eee;&#xA;            padding-bottom: 15px;&#xA;        }&#xA;        .cv-section h2 {&#xA;            color: #333; /* This will likely be overridden by your Gruvbox theme variables */&#xA;            margin-top: 0;&#xA;        }&#xA;        /* etc. */&#xA;    &lt;/style&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt; &lt;div class=&#34;cv-container&#34;&gt;&#xA;        &lt;header&gt;&#xA;            &lt;h1&gt;John Doe&lt;/h1&gt;&#xA;            &lt;p&gt;Web Developer | johndoe@example.com | (555) 123-4567 | linkedin.com/in/johndoe&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Test Page</title>
-      <link>http://localhost:1313/website_tech/projects/test-page/</link>
+      <link>http://localhost:38073/projects/test-page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/website_tech/projects/test-page/</guid>
+      <guid>http://localhost:38073/projects/test-page/</guid>
       <description>&lt;h1 id=&#34;h1-heading-8-&#34;&gt;&#xA;  h1 Heading 8-)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h1-heading-8-&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2-heading&#34;&gt;&#xA;  h2 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h2-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3-heading&#34;&gt;&#xA;  h3 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h3-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4-heading&#34;&gt;&#xA;  h4 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h4-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5-heading&#34;&gt;&#xA;  h5 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h5-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6-heading&#34;&gt;&#xA;  h6 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h6-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h6&gt;&#xA;&lt;h2 id=&#34;horizontal-rules&#34;&gt;&#xA;  Horizontal Rules&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#horizontal-rules&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;typographic-replacements&#34;&gt;&#xA;  Typographic replacements&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#typographic-replacements&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Enable typographer option to see result.&lt;/p&gt;&#xA;&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;&#xA;&lt;p&gt;test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;!!!!!! ???? ,,  &amp;ndash; &amp;mdash;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;emphasis&#34;&gt;&#xA;  Emphasis&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#emphasis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website</title>
-      <link>http://localhost:1313/website_tech/projects/website/</link>
+      <link>http://localhost:38073/projects/website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/website_tech/projects/website/</guid>
+      <guid>http://localhost:38073/projects/website/</guid>
       <description>&lt;h1 id=&#34;project-website&#34;&gt;&#xA;  Project: Website&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#project-website&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Details about this website project.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About me</title>
-      <link>http://localhost:1313/website_tech/about/</link>
+      <link>http://localhost:38073/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/website_tech/about/</guid>
+      <guid>http://localhost:38073/about/</guid>
       <description>&lt;h1 id=&#34;about-me&#34;&gt;&#xA;  About Me&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#about-me&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Some information about me.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CV</title>
-      <link>http://localhost:1313/website_tech/cv/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/website_tech/cv/</guid>
-      <description>&lt;h1 id=&#34;cv&#34;&gt;&#xA;  CV&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cv&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;My curriculum vitae.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

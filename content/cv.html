@@ -1,0 +1,85 @@
+---
+title: "CV"
+date: 2025-05-21
+draft: false # Set to false when you want to publish it
+# menu: main # Optional: if you want it to appear in a menu
+weight: 2 # Optional: for menu ordering
+# layout: "cv" # Optional: if you have a specific custom layout for CVs, otherwise hugo-book's default single page layout will be used for the chrome.
+---
+
+<!DOCTYPE html> <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* You can put page-specific CSS here if absolutely necessary,
+           but it's better to use your global custom.scss for maintainability. */
+        .cv-container {
+            font-family: Arial, sans-serif;
+            /* Add more specific CV styles here or in your custom.scss */
+        }
+        .cv-section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .cv-section h2 {
+            color: #333; /* This will likely be overridden by your Gruvbox theme variables */
+            margin-top: 0;
+        }
+        /* etc. */
+    </style>
+</head>
+<body> <div class="cv-container">
+        <header>
+            <h1>John Doe</h1>
+            <p>Web Developer | johndoe@example.com | (555) 123-4567 | linkedin.com/in/johndoe</p>
+        </header>
+
+        <section class="cv-section" id="summary">
+            <h2>Summary</h2>
+            <p>Highly motivated and results-oriented Web Developer with 5+ years of experience...</p>
+        </section>
+
+        <section class="cv-section" id="experience">
+            <h2>Experience</h2>
+            <div>
+                <h3>Senior Developer - Tech Solutions Inc.</h3>
+                <p><em>Jan 2022 - Present</em></p>
+                <ul>
+                    <li>Developed and maintained web applications using modern technologies.</li>
+                    <li>Led a team of 3 junior developers.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Junior Developer - Web Wizards Co.</h3>
+                <p><em>Jun 2019 - Dec 2021</em></p>
+                <ul>
+                    <li>Assisted in the development of client websites.</li>
+                    <li>Gained experience in front-end and back-end development.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section" id="education">
+            <h2>Education</h2>
+            <div>
+                <h3>B.S. in Computer Science - University of Example</h3>
+                <p><em>Graduated May 2019</em></p>
+            </div>
+        </section>
+
+        <section class="cv-section" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Vue.js, Node.js</li>
+                <li>Python, Django</li>
+                <li>SQL, MongoDB</li>
+                <li>Git, Docker</li>
+            </ul>
+        </section>
+        </div>
+
+</body>
+</html>

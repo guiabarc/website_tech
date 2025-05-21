@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Guilherme Barcelos</title>
-    <link>http://localhost:1313/website_tech/projects/</link>
+    <link>http://localhost:38073/projects/</link>
     <description>Recent content in Projects on Guilherme Barcelos</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/website_tech/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:38073/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test Page</title>
-      <link>http://localhost:1313/website_tech/projects/test-page/</link>
+      <link>http://localhost:38073/projects/test-page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/website_tech/projects/test-page/</guid>
+      <guid>http://localhost:38073/projects/test-page/</guid>
       <description>&lt;h1 id=&#34;h1-heading-8-&#34;&gt;&#xA;  h1 Heading 8-)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h1-heading-8-&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2-heading&#34;&gt;&#xA;  h2 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h2-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3-heading&#34;&gt;&#xA;  h3 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h3-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4-heading&#34;&gt;&#xA;  h4 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h4-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5-heading&#34;&gt;&#xA;  h5 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h5-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6-heading&#34;&gt;&#xA;  h6 Heading&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#h6-heading&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h6&gt;&#xA;&lt;h2 id=&#34;horizontal-rules&#34;&gt;&#xA;  Horizontal Rules&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#horizontal-rules&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;typographic-replacements&#34;&gt;&#xA;  Typographic replacements&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#typographic-replacements&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Enable typographer option to see result.&lt;/p&gt;&#xA;&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;&#xA;&lt;p&gt;test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;!!!!!! ???? ,,  &amp;ndash; &amp;mdash;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;emphasis&#34;&gt;&#xA;  Emphasis&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#emphasis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website</title>
-      <link>http://localhost:1313/website_tech/projects/website/</link>
+      <link>http://localhost:38073/projects/website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/website_tech/projects/website/</guid>
+      <guid>http://localhost:38073/projects/website/</guid>
       <description>&lt;h1 id=&#34;project-website&#34;&gt;&#xA;  Project: Website&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#project-website&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Details about this website project.&lt;/p&gt;</description>
     </item>
   </channel>

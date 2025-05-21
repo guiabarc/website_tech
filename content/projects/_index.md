@@ -1,6 +1,6 @@
 ---
 title: Projects
-weight: 30 # Adjust weight as needed to order menu items
+weight: 2 # Adjust weight as needed to order menu items
 bookCollapseSection: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: About me
-weight: 40 # Adjust weight as needed to order menu items
+weight: 100 # Adjust weight as needed to order menu items
 ---
 
 # About Me
