@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }} - Welcome</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* Common system font stack */
+            background-color: var(--body-background, #1d2021); /* Gruvbox bg_hard as fallback */
+            color: var(--body-font-color, #ebdbb2); /* Gruvbox fg_primary as fallback */
+            display: flex;
+            align-items: center; /* Added for vertical centering */
+            justify-content: center; /* Horizontally center the container */
+            min-height: 100vh;
+            margin: 0;
+            /* padding: 2rem; */ /* Removed padding from body */
+            box-sizing: border-box; /* Can remain on body, it's a good default */
+        }
+        .container {
+            max-width: 800px; /* Max width for the content area */
+            /* width: 100%; */ /* Removed: Let flexbox center the block based on its max-width and content */
+            text-align: left; /* Align text to the left */
+            padding: 2rem; /* Added padding to the container */
+            box-sizing: border-box; /* Ensure padding is included in max-width calculation */
+        }
+        h1 {
+            /* font-family: "Times New Roman", Times, serif; */ /* Or a specific serif font if you have one */
+            font-size: 1.8rem; /* Adjusted size */
+            font-weight: normal;
+            color: var(--body-font-color, #ebdbb2); /* Main text color for h1, as per image */
+            margin-bottom: 1.5rem;
+        }
+        p.intro {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 70ch; /* Limit line length for readability */
+        }
+        .design-work-link {
+            font-size: 1rem;
+            color: var(--color-link, #83a598); /* Gruvbox blue for links */
+            text-decoration: none;
+            display: block;
+            margin-bottom: 3rem;
+        }
+        .design-work-link:hover {
+            text-decoration: underline;
+        }
+        .link-sections {
+            display: flex;
+            flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+            gap: 3rem; /* Space between link sections */
+            padding-top: 1rem;
+        }
+        .link-column {
+            min-width: 150px; /* Minimum width for each column */
+        }
+        .link-column h2 {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--body-font-color, #ebdbb2);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase; /* As per image [CONTACT] */
+            letter-spacing: 0.05em;
+        }
+        .link-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .link-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .link-column ul li a {
+            font-size: 0.9rem;
+            color: var(--body-font-color, #ebdbb2); /* Links in list same as body font for subtlety */
+            text-decoration: none;
+        }
+        .link-column ul li a .external-link-arrow {
+            color: var(--color-link, #83a598); /* Arrow uses link color */
+            margin-left: 0.3em;
+            font-size: 0.8em;
+        }
+        .link-column ul li a:hover {
+            color: var(--color-link, #83a598); /* Link color on hover */
+        }
+        .link-column ul li span.year {
+            font-size: 0.9rem;
+            color: var(--gray-500, #928374); /* A muted Gruvbox color for years */
+            margin-left: 0.5em;
+        }
+
+        /* Placeholder for Chinese characters if you add them later */
+        .chinese-name {
+            font-family: "Songti SC", "Noto Serif CJK SC", serif; /* Example CJK font stack */
+            /* color: var(--color-link, #83a598); */ /* Or a specific color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guilherme Barcelos </h1>
+        <p class="intro">
+            Guilherme Barcelos is a MSc Electrical Engineer focused on digital circuit design, electronics and low level coding.
+            <br><br>
+        </p>
+
+        <div style="display: flex; gap: 2em;">
+            <a href="{{ "/website_tech/projects/" | relURL }}" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects ↗</a>
+            <a href="{{ "/website_tech/cv/" | relURL }}" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV ↗</a>
+            <a href="{{ "/website_tech/about/" | relURL }}" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About ↗</a>
+        </div>
+        <style>
+            .design-work-link:hover {
+                transform: translateY(-2px);
+                color: #fbf1c7 !important; /* Slightly lighter version of the base color */
+            }
+        </style>
+
+    </div>
+</body>
+</html> 

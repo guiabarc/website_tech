@@ -1,14 +1,14 @@
 {
   "name": "Guilherme Barcelos",
   "short_name": "Guilherme Barcelos",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/website_tech/",
+  "scope": "/website_tech/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/website_tech/favicon.svg",
       "sizes": "512x512"
     }
   ]
