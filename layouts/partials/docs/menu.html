@@ -1,16 +1,48 @@
 <nav>
-{{ partial "docs/brand" . }}
-{{ if hugo.IsMultilingual }}
-  {{ partial "docs/languages" . }}
-{{ end }}
+  {{ partial "docs/brand" . }}
+  {{ if hugo.IsMultilingual }}
+    {{ partial "docs/languages" . }}
+  {{ end }}
 
-{{ partial "docs/inject/menu-before" . }}
-{{ partial "docs/menu-hugo" .Site.Menus.before }}
+  {{ partial "docs/inject/menu-before" . }}
 
-{{ partial "docs/menu-filetree" . }}
+  <ul class="book-menu-links">
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" {{ with .Params.class }}class="{{ . }}"{{ end }}>
+          {{ .Name }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
 
-{{ partial "docs/menu-hugo" .Site.Menus.after }}
-{{ partial "docs/inject/menu-after" . }}
+  <hr class="book-menu-separator">
+
+  <div class="book-menu-projects">
+    <h2>PROJECTS</h2>
+    {{ $projects := where .Site.RegularPages "Section" "projects" }}
+    {{ $categories := slice }}
+    {{ range $projects }}
+      {{ $cat := .Params.category | default "Uncategorized" }}
+      {{ if not (in $categories $cat) }}
+        {{ $categories = $categories | append $cat }}
+      {{ end }}
+    {{ end }}
+    {{ range sort $categories }}
+      <div class="book-menu-category">
+        <h3>{{ . }}</h3>
+        <ul>
+          {{ range sort (where $projects "Params.category" .) "Title" }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+
+  {{ partial "docs/inject/menu-after" . }}
 </nav>
 
 <!-- Restore menu position as soon as possible to avoid flickering -->

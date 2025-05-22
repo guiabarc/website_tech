@@ -11,3 +11,55 @@ theme = 'hugo-book'
   # BookRepo = 'https://github.com/guiabarc/website_tech/' # Link to your repo
   # BookEditPath = 'edit/main/content' # If you want an "Edit this page" link
 
+# Main menu items
+[menu]
+  [[menu.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+
+# Projects menu with categories
+  [[menu.projects]]
+    name = "FPGA & DIGITAL DESIGN"
+    weight = 1
+    [[menu.projects.children]]
+      name = "Verilog Traffic Controller"
+      url = "/projects/verilog-traffic-controller/"
+      weight = 1
+    [[menu.projects.children]]
+      name = "Custom RISC-V Core"
+      url = "/projects/riscv-core/"
+      weight = 2
+
+  [[menu.projects]]
+    name = "EMBEDDED SYSTEMS & IOT"
+    weight = 2
+    [[menu.projects.children]]
+      name = "ESP32 Weather Station"
+      url = "/projects/esp32-weather/"
+      weight = 1
+    [[menu.projects.children]]
+      name = "Smart Irrigation System"
+      url = "/projects/smart-irrigation/"
+      weight = 2
+
+  [[menu.projects]]
+    name = "SOFTWARE & INFRASTRUCTURE"
+    weight = 3
+    [[menu.projects.children]]
+      name = "Personal Portfolio Website"
+      url = "/projects/portfolio-website/"
+      weight = 1
+    [[menu.projects.children]]
+      name = "Home Lab Configuration"
+      url = "/projects/home-lab/"
+      weight = 2
+

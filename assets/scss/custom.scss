@@ -214,4 +214,54 @@ $gruvbox-grey-off-white: $gruvbox-fg-dark;
   .project-card-image {
     height: 160px;
   }
+}
+
+/* You can add custom styles here. */
+
+// --- Menu Styling ---
+.book-brand {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--body-font-color);
+  text-transform: uppercase;
+}
+
+.book-menu-links {
+  margin-bottom: 2.5rem;
+}
+
+.book-menu-separator {
+  margin: 2.5rem 0;
+}
+
+.book-menu-projects h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  color: var(--body-font-color);
+}
+
+.book-menu-category h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.04em;
+}
+
+.book-menu-category ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.book-menu-category ul li {
+  margin: 0.2rem 0 0.2rem 0.7rem;
+  font-size: 0.97rem;
+  font-weight: 400;
+  color: var(--body-font-color);
 } 
