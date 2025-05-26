@@ -7,7 +7,9 @@ weight: 2 # Optional: for menu ordering
 # layout: "cv" # Optional: if you have a specific custom layout for CVs, otherwise hugo-book's default single page layout will be used for the chrome.
 ---
 
-<!DOCTYPE html> <html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,56 +32,115 @@ weight: 2 # Optional: for menu ordering
         /* etc. */
     </style>
 </head>
-<body> <div class="cv-container">
+<body>
+    <div class="cv-container">
         <header>
-            <h1>John Doe</h1>
-            <p>Web Developer | johndoe@example.com | (555) 123-4567 | linkedin.com/in/johndoe</p>
+            <h1>Guilherme A. Barcelos</h1>
+            <p>MSc in Electrical and Computer Engineering, specializing in FPGA/ASIC design and hardware systems, seeking a role in the semiconductor industry.</p>
+            <p>31/08/1999 | +351 913 095 927 | gui.a.barcelos@protonmail.com | linkedin.com/in/guilhermebarcelos</p>
         </header>
-
-        <section class="cv-section" id="summary">
-            <h2>Summary</h2>
-            <p>Highly motivated and results-oriented Web Developer with 5+ years of experience...</p>
-        </section>
-
-        <section class="cv-section" id="experience">
-            <h2>Experience</h2>
-            <div>
-                <h3>Senior Developer - Tech Solutions Inc.</h3>
-                <p><em>Jan 2022 - Present</em></p>
-                <ul>
-                    <li>Developed and maintained web applications using modern technologies.</li>
-                    <li>Led a team of 3 junior developers.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Junior Developer - Web Wizards Co.</h3>
-                <p><em>Jun 2019 - Dec 2021</em></p>
-                <ul>
-                    <li>Assisted in the development of client websites.</li>
-                    <li>Gained experience in front-end and back-end development.</li>
-                </ul>
-            </div>
-        </section>
 
         <section class="cv-section" id="education">
             <h2>Education</h2>
             <div>
-                <h3>B.S. in Computer Science - University of Example</h3>
-                <p><em>Graduated May 2019</em></p>
+                <h3>Faculty of Engineering, University of Porto - Portugal</h3>
+                <p><em>2019-2024</em></p>
+                <p>Master's and Bachelor's in Electrical and Computer Engineering.</p>
+                <p><strong>Specialization:</strong> Telecommunications, Electronics, and Computers.</p>
+                <ul>
+                    <li><strong>Key Projects:</strong> Developed an audio processing accelerator in Verilog for Xilinx FPGAs, verified with Vivado; Designed an OpAmp ASIC using Cadence tools; Implemented a vision accelerator using HLS on a Xilinx FPGA + ARM SoC; Built a custom distance sensor for a signal processing coursework.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Technical University of Munich - Germany</h3>
+                <p><em>2023</em></p>
+                <p>Exchange Semester - Focus: RTL Design, Embedded Systems, and HW/SW Codesign.</p>
+                <ul>
+                    <li><strong>Courses:</strong> Circuit Design for Security, HW/SW Codesign, VHDL System Design Lab.</li>
+                    <li><strong>Project:</strong> Designed and implemented a functional clock in VHDL on a Zynq7000 FPGA.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section" id="experience">
+            <h2>Professional Experience</h2>
+            <div>
+                <h3>Synogate (Berlin) - Internship & Master Thesis</h3>
+                <p><em>2024</em></p>
+                <ul>
+                    <li>Designed an optimized RTL Top-K module for FPGA-based Al accelerators, achieving a 100x improvement in resource efficiency and a significant reduction in power consumption.</li>
+                    <li>Enhanced the performance of large language models (LLMs) by optimizing the softmax function with a heap-based architecture.</li>
+                    <li>Developed using Gatery (C++) on Intel FPGA platforms.</li>
+                    <li>Demonstrated and improved proficiency in hardware design, RTL development, and FPGA optimization for Al applications.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Deloitte (Porto) - Curricular Internship</h3>
+                <p><em>2022</em></p>
+                <ul>
+                    <li>Analyzed the potential for mmWave adoption in Portugal through market and technology research, delivering strategic insights on 5G use cases, industrial applications, and consumer impacts to the Telecom Engineering Center of Excellence (TEE).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section" id="extracurricular">
+            <h2>Extracurricular Activities</h2>
+            <div>
+                <h3>Aerospace and Electronic Systems Society (AESS) - Chairman</h3>
+                <p><em>2022-2023</em></p>
+                <ul>
+                    <li>Led the Tarvos Project, prototyping a model rocket with LoRa-based communication and ensuring system integration across the project.</li>
+                    <li>Transitioned the project into the Porto Space Team, enabling further development.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Porto Space Team - Member</h3>
+                <p><em>2022-2023</em></p>
+                <ul>
+                    <li>Defined system requirements for a competition model rocket and developed base electronic systems to guide new team members.</li>
+                    <li>Mentored colleagues on systems engineering and subsystem development.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>IEEE UP Student Branch - Executive Commitee Secretary</h3>
+                <p><em>2021-2022</em></p>
+                <ul>
+                    <li>Recruited new members, communicated between teams, university and companies, and documented key decisions and meetings.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Debating Society of University of Porto - Member</h3>
+                <p><em>2021-2022</em></p>
+                <ul>
+                    <li>Enhanced skills in argumentation and public speaking.</li>
+                    <li>Supported the association with video editing and website management.</li>
+                </ul>
             </div>
         </section>
 
         <section class="cv-section" id="skills">
             <h2>Skills</h2>
             <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Vue.js, Node.js</li>
-                <li>Python, Django</li>
-                <li>SQL, MongoDB</li>
-                <li>Git, Docker</li>
+                <li><strong>Languages:</strong> Portuguese (Native), English (C2), Spanish (Al), Italian (Al), German (AI)</li>
+                <li><strong>FPGA/ASIC Design:</strong> Quartus, Vivado | VHDL, Verilog, HLS | Vivado Simulator, QuestaSim, GTKWave</li>
+                <li><strong>Embedded Systems:</strong> ESPs, Arduino | Microcontroller Programming</li>
+                <li><strong>Programming/Scripting:</strong> Git, C, C++, Python, Bash/Shell, MATLAB, Java</li>
+                <li><strong>System Administration:</strong> Linux, Server Management, Networking</li>
+                <li><strong>Soft Skills:</strong> Team Leadership, Collaboration, Critical Thinking, Adaptability to Multicultural and International Teams, Self-Learning</li>
             </ul>
         </section>
-        </div>
 
+        <section class="cv-section" id="prizes">
+            <h2>Prizes</h2>
+            <div>
+                <h3>Red Bull Paper Wings - National Champion & World Finalist (2022)</h3>
+                <p>Achieved national champion status and represented Portugal in the world finals of the Red Bull Paper Wings competition in the Time of Flight category.</p>
+            </div>
+            <div>
+                <h3>Incentive for International Students (2019-2022)</h3>
+                <p>Consistently awarded by the Faculty of Engineering of the University of Porto for having an outstanding entry grade and maintaining academic excellence. Led to a reduced tuition fee over four consecutive years.</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

@@ -6,7 +6,8 @@
 <meta name="description" content="This very website, built with Hugo and the hugo-book theme.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/website_tech/projects/website/">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:url" content="http://localhost:1313/website_tech/projects/website/">
   <meta property="og:site_name" content="Guilherme Barcelos">
   <meta property="og:title" content="Website">
   <meta property="og:description" content="This very website, built with Hugo and the hugo-book theme.">
@@ -17,9 +18,13 @@
 <link rel="icon" href="/website_tech/favicon.png" >
 <link rel="manifest" href="/website_tech/manifest.json">
 <link rel="canonical" href="http://localhost:1313/website_tech/projects/website/">
-<link rel="stylesheet" href="/website_tech/book.min.9ac5912af47665f0d705a08a77e6f8dbd5cb3e73244f71b8f40ce1375e0e7287.css" integrity="sha256-msWRKvR2ZfDXBaCKd&#43;b429XLPnMkT3G49AzhN14Ococ=" crossorigin="anonymous">
+<link rel="stylesheet" href="/website_tech/book.min.20d11aa9f5f3207cbe12b48bcb5fc5ef8cd60a48b072fa26c96197acb3d131b2.css" integrity="sha256-INEaqfXzIHy&#43;ErSLy1/F74zWCkiwcvomyWGXrLPRMbI=" crossorigin="anonymous">
   <script defer src="/website_tech/fuse.min.js"></script>
-  <script defer src="/website_tech/en.search.min.d8f021375f80a6d5ba42d42a2bb99e9b84bd655174265f8f1711b4b67b615537.js" integrity="sha256-2PAhN1&#43;AptW6QtQqK7mem4S9ZVF0Jl&#43;PFxG0tnthVTc=" crossorigin="anonymous"></script>
+  <script defer src="/website_tech/en.search.min.ff1d71c2fb6310bc49d98a05db44287114e7aa5ddd6354b78427b4d67e550278.js" integrity="sha256-/x1xwvtjELxJ2YoF20QocRTnql3dY1S3hCe01n5VAng=" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@100..900,0..100&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,7 +40,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
   <h2 class="book-brand">
-  <a class="flex align-center" href="/website_tech/"><span>Guilherme Barcelos</span>
+  <a class="flex align-center" href="/website_tech/"><span>G<span>uilherme</span><br>B<span>arcelos</span></span>
   </a>
 </h2>
 
@@ -131,7 +136,21 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#choosing-the-website-type-and-hosting">Choosing the Website Type and Hosting</a></li>
+    <li><a href="#selecting-the-static-site-generator-hugo">Selecting the Static Site Generator: Hugo</a></li>
+    <li><a href="#choosing-the-theme-hugo-book">Choosing the Theme: Hugo Book</a></li>
+    <li><a href="#customization">Customization</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#appearance">Appearance</a>
+      <ul>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -146,7 +165,72 @@ https://github.com/alex-shpak/hugo-book
   Project: Website
   <a class="anchor" href="#project-website">#</a>
 </h1>
-<p>Details about this website project.</p>
+<p>This document outlines the process and rationale behind creating this personal website, which serves as a platform to showcase projects for potential employers, act as a future reference, and provide documentation for others.</p>
+<h2 id="motivation">
+  Motivation
+  <a class="anchor" href="#motivation">#</a>
+</h2>
+<p>Entering the professional market and seeking a first job, I found that a traditional CV alone felt insufficient and not descriptive enough. This website was conceived as a dynamic space to document my projects in detail, offering potential employers a deeper insight into my work. It also serves as a personal archive for future reference on past projects and can potentially assist others undertaking similar endeavors.</p>
+<h2 id="choosing-the-website-type-and-hosting">
+  Choosing the Website Type and Hosting
+  <a class="anchor" href="#choosing-the-website-type-and-hosting">#</a>
+</h2>
+<p>The initial step involved deciding on the type of website. Given the need for a fast, easily rendered site that could be hosted on the free tier of GitHub Pages and then pointed to my own domain via DNS, a static website emerged as the clear choice.</p>
+<h2 id="selecting-the-static-site-generator-hugo">
+  Selecting the Static Site Generator: Hugo
+  <a class="anchor" href="#selecting-the-static-site-generator-hugo">#</a>
+</h2>
+<p>Research into static site generators led to the conclusion that Hugo would be the most suitable tool. Several factors contributed to this decision:</p>
+<ul>
+<li><strong>Extensive Theme Availability:</strong> Hugo offers a wide variety of themes, which significantly simplifies the development process, especially considering my limited web development experience.</li>
+<li><strong>Robust Support and Community:</strong> Hugo benefits from strong support and a large community, making it easier to find help and resources.</li>
+<li><strong>Performance:</strong> Hugo is known for its excellent performance, which is crucial for hosting on GitHub Pages and ensuring a good user experience.</li>
+</ul>
+<p>While considering other tools like Jekyll or Eleventy, I found Hugo to be better documented and, in my assessment, slightly more performative. It&rsquo;s worth noting that some of these choices were based on subjective judgment rather than purely objective criteria.</p>
+<h2 id="choosing-the-theme-hugo-book">
+  Choosing the Theme: Hugo Book
+  <a class="anchor" href="#choosing-the-theme-hugo-book">#</a>
+</h2>
+<p>The <code>hugo-book</code> theme was selected for its versatile three-panel page layout, which is particularly well-suited for documentation and other applications. Key features supported by the theme that were appealing include:</p>
+<ul>
+<li>Mermaid diagrams</li>
+<li>Katex (similar to LaTeX)</li>
+<li>Tabs</li>
+<li>Extra configurations directly within Markdown</li>
+</ul>
+<p>These features make it considerably easier to create complex documentation.</p>
+<h2 id="customization">
+  Customization
+  <a class="anchor" href="#customization">#</a>
+</h2>
+<p>To facilitate easier customization and ensure the website meets my exact requirements without starting from scratch, I created a personal fork of the <code>hugo-book</code> theme.</p>
+<p>[Link to Hugo Book Personal Fork - <em>Placeholder: Please provide the link here</em>]</p>
+<p>This approach allows for faster and more straightforward development by building upon an existing base while still enabling full personalization.</p>
+<h2 id="development">
+  Development
+  <a class="anchor" href="#development">#</a>
+</h2>
+<p>Given my limited experience with web development, I decided to leverage existing tools and libraries like Hugo and the chosen theme, augmented by an AI assistant, to accelerate the website development process. This approach allowed me to build the website quicker while simultaneously learning about the underlying mechanics of web development, focusing on aspects relevant to employment and security.</p>
+<p>By creating prompts for the AI assistant, I was able to modify the theme and configure the website. This process helped me understand the internal workings of the website and gain knowledge that will be beneficial for future web development projects.</p>
+<p>The combination of Hugo and the <code>hugo-book</code> theme has proven quite performant and effective for my needs. Additionally, Cursor as my IDE has been a valuable tool due to its intuitive design and compatibility with my projects.</p>
+<h2 id="appearance">
+  Appearance
+  <a class="anchor" href="#appearance">#</a>
+</h2>
+<p>For the website&rsquo;s appearance, the goal was a minimalistic yet interesting look. I aimed for a design that is professional, easy to read, and feels somewhat familiar, while also incorporating a personal touch befitting a personal website, not a corporate one. The focus is on showcasing my individuality through the design.</p>
+<p>The <strong>Groovebox</strong> theme was chosen for the appearance for several reasons:</p>
+<ol>
+<li>It is the theme I use across my computer environment.</li>
+<li>I feel it is representative of my aesthetic preferences, particularly the color scheme, which I find visually appealing and easy on the eyes.</li>
+</ol>
+<p>Currently, the website uses a dark theme, which is my personal preference. While a light theme option may be considered in the future to accommodate others, the focus remains on the dark theme for now.</p>
+<p>A significant influence on the website&rsquo;s design was Ethan Chng&rsquo;s website. I drew inspiration from both his current minimal landing page [1] and the structure of his previous website [2], which had well-defined sections. His work as a designer was highly impactful on the visual direction of this project.</p>
+<h3 id="references">
+  References
+  <a class="anchor" href="#references">#</a>
+</h3>
+<p>[1] Ethan Chng&rsquo;s current website: <a href="https://www.ethanchng.com/">https://www.ethanchng.com/</a>
+[2] Ethan Chng&rsquo;s website via Wayback Machine: <a href="https://web.archive.org/web/20240819190326/https://www.ethanchng.com/">https://web.archive.org/web/20240819141455/https://www.ethanchng.com/</a></p>
 </article>
  
       
@@ -186,7 +270,21 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#choosing-the-website-type-and-hosting">Choosing the Website Type and Hosting</a></li>
+    <li><a href="#selecting-the-static-site-generator-hugo">Selecting the Static Site Generator: Hugo</a></li>
+    <li><a href="#choosing-the-theme-hugo-book">Choosing the Theme: Hugo Book</a></li>
+    <li><a href="#customization">Customization</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#appearance">Appearance</a>
+      <ul>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  

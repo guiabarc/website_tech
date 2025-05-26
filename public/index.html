@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Barcelos - Welcome</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@100..900,0..100&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";  
@@ -26,19 +31,30 @@
             box-sizing: border-box;  
         }
         h1 {
-            font-size: 2.4rem;  
-            font-weight: 900;   
+            font-family: "Space Grotesk", sans-serif;  
+            font-optical-sizing: auto;  
+            font-size: 2.8rem;  
+               
+               
             color: var(--body-font-color, #ebdbb2);
-            margin-bottom: 2rem;  
-            line-height: 1.2;
-            text-transform: uppercase;  
+            margin-bottom: 1rem;  
+            line-height: 1.0;  
+             
             letter-spacing: 0.03em;  
         }
+        h1 span {
+            font-variant: small-caps;
+        }
         p.intro {
+            font-family: "Work Sans", sans-serif;  
+            font-optical-sizing: auto;  
+            font-weight: 400;  
             font-size: 1.15rem;  
             line-height: 1.7;
-            margin-bottom: 2.5rem;
+            margin-bottom: 5.5rem;  
             max-width: 70ch;
+            text-align: justify;  
+            text-align-last: justify;  
         }
         .design-work-link {
             font-size: 1rem;
@@ -99,20 +115,41 @@
             font-family: "Songti SC", "Noto Serif CJK SC", serif;  
                
         }
+
+         
+        .doto-menu {
+          font-family: "Doto", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;  
+          font-style: normal;
+          font-variation-settings:
+            "ROND" 0;  
+        }
+
+         
+        .doto-menu-link {
+          font-family: "Doto", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 700;  
+          font-style: normal;
+          font-variation-settings:
+            "ROND" 100;  
+          font-size: 1.5rem;  
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>GUILHERME<br>BARCELOS</h1>
+        <h1>G<span>uilherme</span><br>B<span>arcelos</span></h1>
         <p class="intro">
-            I'm Guilherme Barcelos, an MSc in Electrical and Computer Engineering, focused on digital circuit design, electronics, and low-level programming. I also just love computers — I'm a Linux nerd who’s always tinkering with servers. When I'm not focused on tech, you'll probably find me behind a camera or in the kitchen.
+            I'm Guilherme Barcelos, an MSc in Electrical and Computer Engineering, focused on digital circuit design, electronics, and low-level programming. I also just love computers — I'm a Linux nerd who's always tinkering with servers. When I'm not focused on tech, you'll probably find me behind a camera or in the kitchen.
             <br><br>
         </p>
 
-        <div style="display: flex; gap: 2em;">
-            <a href="/website_tech/projects/" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects</a>
-            <a href="/website_tech/cv/" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV</a>
-            <a href="/website_tech/about/" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About</a>
+        <div style="display: flex; justify-content: space-between;">
+            <a href="/website_tech/projects/" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects</a>
+            <a href="/website_tech/cv/" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV</a>
+            <a href="/website_tech/about/" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About</a>
         </div>
         <style>
             .design-work-link:hover {

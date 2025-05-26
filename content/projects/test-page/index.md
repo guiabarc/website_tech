@@ -2,7 +2,7 @@
 title: Test Page
 weight: 10 # Adjust weight as needed to order under Projects
 description: "Test page to check Markdown rendering."
-image: "/images/projects/website-cover.jpg" # Placeholder, replace with your actual image path
+image: "projects/test-page/nyan-cat.png" # Placeholder, replace with your actual image path
 ---
 
 # h1 Heading 8-)

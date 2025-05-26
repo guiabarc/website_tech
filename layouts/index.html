@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }} - Welcome</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@100..900,0..100&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* Common system font stack */
@@ -25,19 +30,30 @@
             box-sizing: border-box; /* Ensure padding is included in max-width calculation */
         }
         h1 {
-            font-size: 2.4rem; /* Reduced from 2.8rem */
-            font-weight: 900;  /* Bolder */
+            font-family: "Space Grotesk", sans-serif; /* Apply Space Grotesk font */
+            font-optical-sizing: auto; /* Recommended for variable fonts */
+            font-size: 2.8rem; /* Reduced from 2.8rem */
+            /* font-weight: 500; Bolder - can adjust Exo 2 weight */ /* Adjust weight for Space Grotesk */
+            /* font-variation-settings: "ROND" 100; */ /* Removed Doto-specific setting */
             color: var(--body-font-color, #ebdbb2);
-            margin-bottom: 2rem; /* Adjusted margin */
-            line-height: 1.2;
-            text-transform: uppercase; /* Optional: if you want it like the sidebar title */
+            margin-bottom: 1rem; /* Reduced spacing below title */
+            line-height: 1.0; /* Reduced line-height */
+            /* text-transform: uppercase; Removed to allow mixed case */
             letter-spacing: 0.03em; /* Optional: if you want it like the sidebar title */
         }
+        h1 span {
+            font-variant: small-caps;
+        }
         p.intro {
+            font-family: "Work Sans", sans-serif; /* Apply Work Sans font */
+            font-optical-sizing: auto; /* Recommended for variable fonts */
+            font-weight: 400; /* Default weight for Work Sans */
             font-size: 1.15rem; /* Increased size */
             line-height: 1.7;
-            margin-bottom: 2.5rem;
+            margin-bottom: 5.5rem; /* Increased spacing below paragraph */
             max-width: 70ch;
+            text-align: justify; /* Justify the paragraph */
+            text-align-last: justify; /* Justify the last line as well */
         }
         .design-work-link {
             font-size: 1rem;
@@ -98,20 +114,41 @@
             font-family: "Songti SC", "Noto Serif CJK SC", serif; /* Example CJK font stack */
             /* color: var(--color-link, #83a598); */ /* Or a specific color */
         }
+
+        /* Doto font class */
+        .doto-menu {
+          font-family: "Doto", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400; /* Default weight, can be overridden */
+          font-style: normal;
+          font-variation-settings:
+            "ROND" 0; /* Default roundness, can be overridden */
+        }
+
+        /* Specific style for menu items, adjust weight and roundness as needed */
+        .doto-menu-link {
+          font-family: "Doto", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 700; /* Example weight */
+          font-style: normal;
+          font-variation-settings:
+            "ROND" 100; /* Example roundness */
+          font-size: 1.5rem; /* Increased font size */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>GUILHERME<br>BARCELOS</h1>
+        <h1>G<span>uilherme</span><br>B<span>arcelos</span></h1>
         <p class="intro">
-            I'm Guilherme Barcelos, an MSc in Electrical and Computer Engineering, focused on digital circuit design, electronics, and low-level programming. I also just love computers — I'm a Linux nerd who’s always tinkering with servers. When I'm not focused on tech, you'll probably find me behind a camera or in the kitchen.
+            I'm Guilherme Barcelos, an MSc in Electrical and Computer Engineering, focused on digital circuit design, electronics, and low-level programming. I also just love computers — I'm a Linux nerd who's always tinkering with servers. When I'm not focused on tech, you'll probably find me behind a camera or in the kitchen.
             <br><br>
         </p>
 
-        <div style="display: flex; gap: 2em;">
-            <a href="{{ "/website_tech/projects/" | relURL }}" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects</a>
-            <a href="{{ "/website_tech/cv/" | relURL }}" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV</a>
-            <a href="{{ "/website_tech/about/" | relURL }}" class="design-work-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About</a>
+        <div style="display: flex; justify-content: space-between;">
+            <a href="{{ "/website_tech/projects/" | relURL }}" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects</a>
+            <a href="{{ "/website_tech/cv/" | relURL }}" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV</a>
+            <a href="{{ "/website_tech/about/" | relURL }}" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About</a>
         </div>
         <style>
             .design-work-link:hover {
