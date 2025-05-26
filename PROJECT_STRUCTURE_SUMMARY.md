@@ -108,4 +108,110 @@ Located in `themes/hugo-book/`. This is a fork of the original hugo-book theme, 
 
 ---
 
-*This summary is intended to guide further development and theme customization, especially for AI-assisted workflows.* 
+*This summary is intended to guide further development and theme customization, especially for AI-assisted workflows.*
+
+---
+
+## Extended Customization Notes: Working with Fonts
+
+This section details the process for adding and applying custom web fonts (e.g., from Google Fonts) to both standalone Hugo layouts (like a custom landing page) and within the `hugo-book` theme structure.
+
+### 1. Applying Fonts to a Standalone HTML Page (e.g., `layouts/index.html`)
+
+For pages that do not inherit from the theme's base templates or use their own `<head>` and `<style>` sections:
+
+1.  **Embed Font Link in HTML `<head>`:**
+    *   Add the necessary `<link rel="preconnect" ...>` and `<link href="..." rel="stylesheet">` tags from your font provider (e.g., Google Fonts) directly into the `<head>` of your specific HTML file (e.g., `layouts/index.html`).
+    *   Ensure the `href` attribute in the stylesheet link correctly includes all desired font families, weights, and styles (e.g., `family=Font1:wght@400;700&family=Font2:ital,wght@0,300..700;1,300..700&display=swap`).
+
+2.  **Define CSS Rules (Inline or Page-Specific CSS):**
+    *   Within a `<style>` block in the `<head>` of the same HTML file, or in a CSS file linked only by this page, define the CSS rules to apply the fonts.
+    *   Use `font-family: "Font Name", fallback-font-family;` along with properties like `font-weight`, `font-style`, `letter-spacing`, `line-height`, and `font-variation-settings` (for variable fonts).
+    *   Example:
+        ```html
+        <style>
+          h1.landing-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 400; /* Or desired weight */
+            letter-spacing: 0.03em;
+          }
+          p.landing-intro {
+            font-family: "Work Sans", sans-serif;
+          }
+          .landing-menu-item {
+            font-family: "Doto", sans-serif;
+            font-variation-settings: "ROND" 100; /* If Doto is variable with ROND axis */
+          }
+        </style>
+        ```
+
+3.  **Apply to HTML Elements:**
+    *   Use the CSS selectors (classes, element tags) defined in your styles on the corresponding HTML elements in the body of the page.
+
+### 2. Applying Fonts Throughout the Hugo Theme (e.g., `hugo-book`)
+
+For consistent font application across pages rendered by the theme:
+
+1.  **Embed Font Link in Theme's Head Partial:**
+    *   Locate the theme's main HTML head partial (for `hugo-book`, this is typically `themes/hugo-book/layouts/partials/docs/html-head.html`).
+    *   Add the *comprehensive* Google Font `<link>` tags (as in step 1.1 above, including *all* fonts needed for the theme) to this file. This ensures fonts are loaded globally for theme pages.
+    *   **Key Learning:** Failure to include a font here, or an incorrect link, will cause the browser to use a fallback font for theme elements, even if CSS rules attempt to specify the custom font.
+
+2.  **Define SASS Variables for Fonts (Recommended):**
+    *   In the theme's SASS defaults file (e.g., `themes/hugo-book/assets/_defaults.scss`), define SASS variables for your desired font families. This centralizes definitions and improves maintainability.
+    *   Example:
+        ```scss
+        // In themes/hugo-book/assets/_defaults.scss
+        $font-family-sans-serif: -apple-system, /* other fallbacks */ !default; // Base fallback
+
+        $font-family-theme-title: "Space Grotesk", $font-family-sans-serif !default;
+        $font-family-theme-body: "Work Sans", $font-family-sans-serif !default;
+        $font-family-theme-menu: "Doto", $font-family-sans-serif !default;
+        ```
+
+3.  **Apply Fonts using SASS Variables in Theme SCSS:**
+    *   In the theme's main SCSS files (e.g., `themes/hugo-book/assets/_main.scss`, `themes/hugo-book/assets/_markdown.scss`), use your defined SASS variables to set the `font-family` for relevant selectors.
+    *   Example:
+        ```scss
+        // In themes/hugo-book/assets/_main.scss
+        body {
+          font-family: $font-family-theme-body;
+        }
+        .book-brand { // Theme's main site title (e.g., in sidebar)
+          font-family: $font-family-theme-title;
+          font-weight: 400; // Specify weight as needed
+          line-height: 1.0;
+          letter-spacing: 0.03em;
+        }
+        .book-menu-links a { // Main menu links in sidebar
+          font-family: $font-family-theme-menu;
+          font-variation-settings: "ROND" 100; // For Doto full roundness
+        }
+        ```
+
+4.  **Styling for Specific Effects (e.g., Small Caps in Theme Title):**
+    *   To apply effects like small caps to parts of a theme element (e.g., the site title):
+        *   Override or copy the relevant theme HTML partial (e.g., copy `themes/hugo-book/layouts/partials/docs/brand.html` to `layouts/partials/docs/brand.html` for project-level override, or edit directly in the theme if you are maintaining a fork).
+        *   Modify the HTML within the partial to wrap text segments in `<span>` tags. For example, if `{{ .Site.Title }}` is "Guilherme Barcelos", change `<span>{{ .Site.Title }}</span>` to `<span>G<span>uilherme</span><br>B<span>arcelos</span></span>`.
+        *   In the theme's SCSS (e.g., `_main.scss`), add a CSS rule to target these nested spans:
+            ```scss
+            .book-brand span span { // Targets the inner spans for 'uilherme' and 'arcelos'
+              font-variant: small-caps;
+            }
+            ```
+        *   Ensure any conflicting `text-transform: uppercase;` on the parent element (e.g., `.book-brand`) is removed or commented out if you want true initial caps followed by small caps.
+
+### 3. Troubleshooting Font Issues:
+
+*   **Browser Cache/Hard Refresh:** Always the first step. Use Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac).
+*   **Clean Hugo Build:** Delete `public/` and `resources/` directories from your project root and run `hugo` to force a full rebuild of assets.
+*   **Developer Tools:**
+    *   **Inspect Element & Computed Styles:** Essential for seeing which `font-family` is *actually* active (it will be underlined or highlighted in the font stack shown in the "Computed" tab). If a fallback font is active, the desired custom font is not loading or being applied correctly for that element.
+    *   **Console:** Check for any font loading errors (e.g., 404 Not Found for font files).
+    *   **Network Tab:** Confirm that font files are being requested from the correct URL (e.g., `fonts.gstatic.com`) and are returning a 200 OK status.
+*   **Direct Font Application Test:** Temporarily replace SASS font variables in your SCSS with the direct font name string (e.g., `font-family: "Space Grotesk", sans-serif;`) to check if the SASS variable itself is the issue or if the font isn't loading/applying for other reasons.
+*   **Verify Font Names & Links:** Double-check font names for exact spelling in CSS/SASS and in the Google Fonts `<link>` tag's `family=` parameter.
+*   **Font Weights:** Ensure specified `font-weight` values are available for the font and match the desired visual appearance. Variable fonts offer a range, while static fonts have discrete weights. An un-styled `<h1>` might have a default browser weight (e.g. `bold` or `700`), while applying a font without an explicit weight might default it to `400` (`normal`). This was a key factor in matching the landing page and theme title appearance.
+*   **CSS Specificity:** If styles aren't applying, a more specific CSS rule elsewhere could be overriding your intended styles.
+
+By following these steps and using browser developer tools diligently, custom fonts can be effectively managed and debugged across different parts of a Hugo project. 
