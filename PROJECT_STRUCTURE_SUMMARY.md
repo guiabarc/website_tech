@@ -72,6 +72,25 @@ Located in `themes/hugo-book/`. This is a fork of the original hugo-book theme, 
   1.  **Define Base Colors:** Edit `themes/hugo-book/assets/_gruvbox_theme_variables.scss`. This file holds all the core Gruvbox color SASS variables (e.g., `$gruvbox-bg-hard`, `$gruvbox-fg-primary`, `$gruvbox-blue-strong`). Change the hex codes here to modify your base palette.
   2.  **Apply Colors to Theme Structure:** Review `themes/hugo-book/assets/_defaults.scss`. The `@mixin theme-dark` (and `@mixin theme-light` for light mode) use the SASS variables from `_gruvbox_theme_variables.scss` to set CSS custom properties like `--body-background`, `--color-link`, etc. For example, `--body-background: #{$gruvbox-bg-hard};`. You can adjust which Gruvbox variable is assigned to which CSS custom property here if needed.
   3.  **Specific Element Styling:** If certain elements are not picking up the desired colors, you might need to add or modify CSS rules in other theme SCSS files (e.g., `_main.scss`, `_markdown.scss`) or, as a last resort for minor tweaks, in the project root's `assets/scss/custom.scss` file. Ensure these rules also utilize the `$gruvbox-...` SASS variables for consistency.
+
+- **Sidebar Menu Customization (Structure, Styling, Dynamic Content):**
+    -   **Preferred Method for Deep Customization:** For substantial changes to menu structure, appearance (font sizes, colors, layout), and behavior, directly modifying the theme's own SCSS files and HTML partials is more effective and robust than relying solely on the project root's `assets/scss/custom.scss`.
+    -   **Key Theme Files for Menu Styling & Structure:**
+        -   Layout Override: Copy `themes/hugo-book/layouts/partials/docs/menu.html` to your project's `layouts/partials/docs/menu.html` to customize its HTML structure.
+        -   Global Variables: `themes/hugo-book/assets/_defaults.scss` contains SASS variables like `$menu-width` (controls sidebar width).
+        -   Primary Styling Rules: `themes/hugo-book/assets/_main.scss` contains the main CSS rules for menu components. Key selectors to modify or add to include:
+            -   `.book-brand`: Styles the site title/your name at the top of the menu.
+            -   `.book-menu-links a` (if using the custom structure implemented): Styles the main navigation links (e.g., "About Me," "CV").
+            -   Custom classes for dynamic project listing (if implemented): `.book-menu-projects h2` (for the "PROJECTS" title), `.book-menu-category h3` (for category titles), and `.book-menu-category ul li a` (for individual project links).
+    -   **Dynamic Project Listing in Menu:**
+        -   To automatically populate a "PROJECTS" section, the custom `layouts/partials/docs/menu.html` can use Hugo templating (e.g., `{{ $projects := where .Site.RegularPages "Section" "projects" }}`).
+        -   Projects can then be grouped and displayed based on a front matter parameter (e.g., `category: "FPGA & DIGITAL DESIGN"`) in their respective Markdown files (e.g., under `content/projects/`).
+        -   This approach avoids manually defining all project links in `hugo.toml`.
+    -   **Styling Considerations for Menu Customizations:**
+        -   When adding new interactive elements (like a clickable "PROJECTS" title), ensure corresponding styles are added in `_main.scss` for visual consistency and hover/focus states.
+        -   For text elements that should not appear interactive (e.g., category titles), use CSS like `cursor: default;` and `user-select: none;`.
+        -   Modifying or removing default browser focus outlines (e.g., `outline: none;` on `:focus, :focus-visible`) should be done with care, considering accessibility. If default outlines are removed, provide clear alternative visual focus indicators.
+
 - **Main Page Layout (Centering Content):**
   - The overall page structure (left menu, main content, right ToC) is defined in `themes/hugo-book/layouts/_default/baseof.html`.
   - The `<main>` HTML element in `baseof.html` uses the class `book-layout-main flex`. The CSS for `book-layout-main` (in `themes/hugo-book/assets/_main.scss`) makes this container full-width (`display: flex; width: 100%;`).
