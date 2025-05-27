@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@100..900,0..100&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -47,10 +47,11 @@
         p.intro {
             font-family: "Work Sans", sans-serif; /* Apply Work Sans font */
             font-optical-sizing: auto; /* Recommended for variable fonts */
-            font-weight: 400; /* Default weight for Work Sans */
+            font-weight: 500; /* Default weight for Work Sans */
             font-size: 1.15rem; /* Increased size */
-            line-height: 1.7;
-            margin-bottom: 5.5rem; /* Increased spacing below paragraph */
+            word-spacing: -0.1em;
+            line-height: 1.5;
+            margin-bottom: 2.5rem; /* Increased spacing below paragraph */
             max-width: 70ch;
             text-align: justify; /* Justify the paragraph */
             text-align-last: justify; /* Justify the last line as well */
@@ -115,25 +116,21 @@
             /* color: var(--color-link, #83a598); */ /* Or a specific color */
         }
 
-        /* Doto font class */
-        .doto-menu {
-          font-family: "Doto", sans-serif;
+        /* Kode Mono font class */
+        .kode-mono {
+          font-family: "Kode Mono", monospace;
           font-optical-sizing: auto;
           font-weight: 400; /* Default weight, can be overridden */
           font-style: normal;
-          font-variation-settings:
-            "ROND" 0; /* Default roundness, can be overridden */
         }
 
-        /* Specific style for menu items, adjust weight and roundness as needed */
-        .doto-menu-link {
-          font-family: "Doto", sans-serif;
+        /* Specific style for menu items using Kode Mono */
+        .kode-mono-menu-link {
+          font-family: "Kode Mono", monospace;
           font-optical-sizing: auto;
-          font-weight: 700; /* Example weight */
+          font-weight: 600; /* Adjusted weight for menu links */
           font-style: normal;
-          font-variation-settings:
-            "ROND" 100; /* Example roundness */
-          font-size: 1.5rem; /* Increased font size */
+          font-size: 1.5rem; /* Maintained font size */
         }
     </style>
 </head>
@@ -146,9 +143,9 @@
         </p>
 
         <div style="display: flex; justify-content: space-between;">
-            <a href="{{ "/website_tech/projects/" | relURL }}" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects</a>
-            <a href="{{ "/website_tech/cv/" | relURL }}" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV</a>
-            <a href="{{ "/website_tech/about/" | relURL }}" class="design-work-link doto-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About</a>
+            <a href="{{ "/website_tech/projects/" | relURL }}" class="design-work-link kode-mono-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">Projects</a>
+            <a href="{{ "/website_tech/cv/" | relURL }}" class="design-work-link kode-mono-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">CV</a>
+            <a href="{{ "/website_tech/about/" | relURL }}" class="design-work-link kode-mono-menu-link" style="color: var(--body-font-color, #ebdbb2); transition: all 0.2s ease; text-decoration: none;">About</a>
         </div>
         <style>
             .design-work-link:hover {
