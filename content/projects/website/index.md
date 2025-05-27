@@ -3,7 +3,7 @@ title: Website
 weight: 10 # Adjust weight as needed to order under Projects
 description: "This very website, built with Hugo and the hugo-book theme."
 image: "projects/website/website.png" # Placeholder, replace with your actual image path
-category: "SOFTWARE & INFRASTRUCTURE"
+category: "Software & Infrastructure"
 ---
 
 # Project: Website

@@ -6,7 +6,7 @@ theme = 'hugo-book'
 # Hugo-Book theme specific configurations can be added here
 # Check the theme's documentation for available options
 [params]
-  BookTheme = 'auto' # or 'light' or 'dark'
+  BookTheme = 'dark' # or 'light' or 'dark'
   BookSection = "/" # Use root content for menu
   # BookRepo = 'https://github.com/guiabarc/website_tech/' # Link to your repo
   # BookEditPath = 'edit/main/content' # If you want an "Edit this page" link
@@ -28,7 +28,7 @@ theme = 'hugo-book'
 
 # Projects menu with categories
   [[menu.projects]]
-    name = "FPGA & DIGITAL DESIGN"
+    name = "FPGA & Digital Design"
     weight = 1
     [[menu.projects.children]]
       name = "Verilog Traffic Controller"
@@ -40,7 +40,7 @@ theme = 'hugo-book'
       weight = 2
 
   [[menu.projects]]
-    name = "EMBEDDED SYSTEMS & IOT"
+    name = "Embedded Systems & IoT"
     weight = 2
     [[menu.projects.children]]
       name = "ESP32 Weather Station"
@@ -52,7 +52,7 @@ theme = 'hugo-book'
       weight = 2
 
   [[menu.projects]]
-    name = "SOFTWARE & INFRASTRUCTURE"
+    name = "Software & Infrastructure"
     weight = 3
     [[menu.projects.children]]
       name = "Personal Portfolio Website"

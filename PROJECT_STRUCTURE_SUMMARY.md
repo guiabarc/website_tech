@@ -215,3 +215,60 @@ For consistent font application across pages rendered by the theme:
 *   **CSS Specificity:** If styles aren't applying, a more specific CSS rule elsewhere could be overriding your intended styles.
 
 By following these steps and using browser developer tools diligently, custom fonts can be effectively managed and debugged across different parts of a Hugo project. 
+
+---
+
+## Conversation Summary: Menu and Font Customization Deep Dive
+
+This section summarizes the key learnings and steps taken during the process of customizing menu appearance and fonts, addressing specific challenges encountered.
+
+### 1. Initial Goal & Font Application Strategy:
+
+- The primary goal was to achieve consistent font usage in the left-hand menu: "Space Grotesk" for the main title ("Guilherme Barcelos") and "Doto" for menu links, categories, and project names.
+- The project documentation (`PROJECT_STRUCTURE_SUMMARY.md`) correctly identified `themes/hugo-book/assets/_defaults.scss` (for SASS variables like `$font-family-menu`, `$font-family-body`, `$font-family-title`), `themes/hugo-book/layouts/partials/docs/html-head.html` (for Google Fonts import links), and `themes/hugo-book/assets/_main.scss` (for applying styles with selectors like `.book-menu-links a`, `.book-menu-projects h2`, `.book-menu-category h3`, `.book-menu-category ul li a`) as key files for theme font customization.
+
+### 2. Replacing Doto with Kode Mono:
+
+- The requirement changed from using "Doto" to "Kode Mono" for menu items.
+- This involved:
+    - Updating the `$font-family-menu` variable in `themes/hugo-book/assets/_defaults.scss` to reference "Kode Mono".
+    - Modifying the Google Fonts `<link>` tag in `themes/hugo-book/layouts/partials/docs/html-head.html` to include "Kode Mono" and remove "Doto".
+    - Removing the Doto-specific `font-variation-settings: "ROND" 100;` rule from relevant menu selectors in `themes/hugo-book/assets/_main.scss`.
+    - Adjusting the `font-weight` for these Kode Mono menu elements to `600` (consistent with landing page styling) in `themes/hugo-book/assets/_main.scss`.
+    - Refining font sizes in `themes/hugo-book/assets/_main.scss` for a clearer menu hierarchy:
+        - Primary menu links (`.book-menu-links a`) and "PROJECTS" title (`.book-menu-projects h2`): `1.15rem`
+        - Category titles (`.book-menu-category h3`): `1.0rem`
+        - Project links (`.book-menu-category ul li a`): `1.15rem` (adjusted during conversation)
+
+### 3. Setting Body/Content Font to Work Sans:
+
+- The goal was to ensure the main content (`.book-page`) and Table of Contents (`.book-toc`) used the "Work Sans" font.
+- Initially, it was assumed that setting `$font-family-body` to "Work Sans" in `_defaults.scss` and applying it to the `body` in `_main.scss` would be sufficient.
+- **Problem:** Inspection revealed Roboto was being used.
+- **Discovery:** The `themes/hugo-book/assets/_fonts.scss` file contained a specific `body { font-family: 'Roboto', sans-serif; }` rule. Due to the import order in `themes/hugo-book/assets/book.scss` (`_fonts.scss` is imported after `_main.scss`), this rule was overriding the one in `_main.scss`.
+- **Solution:** The `body` rule in `themes/hugo-book/assets/_fonts.scss` was changed to `font-family: $font-family-body;` to correctly utilize the "Work Sans" variable defined in `_defaults.scss`.
+
+### 4. Addressing Unexpected Uppercase Text:
+
+- **Problem:** The "PROJECTS" title and category titles appeared in full uppercase despite CSS rules intended to prevent this.
+- **Investigation:** Initial focus was on CSS `text-transform` rules. Attempts were made to remove/override `text-transform: uppercase;` in `themes/hugo-book/assets/_main.scss` and `assets/scss/custom.scss` using `!important`.
+- **Key Realization:** CSS `text-transform` only affects presentation, not the source text. The text must be in the desired casing in the HTML source.
+- **Discovery:** The uppercase text was traced back to the `name` field of the menu entries defined directly in the `[menu]` section of the `hugo.toml` configuration file.
+- **Resolution:** To fix the uppercase issue, the `name` values in `hugo.toml` for the "Projects" menu entry and the category children entries must be changed to the desired casing (e.g., `name = "Projects"`, `name = "Software & Infrastructure"`). CSS rules like `text-transform: none;` are still good practice to prevent unintended transformations but cannot force lowercase if the source is uppercase.
+
+### 5. Menu Indentation & Spacing:
+
+- To create a clearer hierarchy, a `padding-left: 0.8rem;` was added to the `.book-menu-category` selector in `themes/hugo-book/assets/_main.scss` to indent category titles relative to the "PROJECTS" title.
+- The existing `margin` on the `ul` within `.book-menu-category` provides the subsequent indentation for the project links.
+
+### 6. Troubleshooting & Debugging:
+
+- Throughout the process, key debugging steps included:
+    - Using browser developer tools to inspect computed styles and identify conflicting rules.
+    - Performing hard refreshes of the browser.
+    - **Crucially, manually deleting the `resources` folder** in the project root and rebuilding the site to clear Hugo's asset cache (`rm -rf resources/` followed by `hugo` or `hugo server --cleanDeploy`). This was a vital step when CSS changes didn't appear to take effect.
+    - Examining Hugo theme partials (`layouts/partials/docs/`) to understand how menu elements are generated and what data sources (`.Site.Menus`, `.Page.Title`, `.File.BaseFileName`, etc.) are used.
+    - Checking the project's `assets/scss/custom.scss` for potential overriding styles.
+    - Recognizing that `text-transform` in CSS does not alter the source text, leading to the discovery of the uppercase hardcoding in `hugo.toml`.
+
+This detailed summary covers the font choices, styling adjustments, the debugging process for the text-transform and Roboto font issues, and the final understanding of how the menu structure and text content are controlled in this Hugo project with the `hugo-book` theme. 

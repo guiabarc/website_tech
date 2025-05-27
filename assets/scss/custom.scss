@@ -217,3 +217,12 @@ $gruvbox-grey-off-white: $gruvbox-fg-dark;
 }
 
 /* You can add custom styles here. */
+
+// Explicit overrides for menu text transform
+.book-menu-projects h2 {
+  text-transform: none !important;
+}
+
+.book-menu-category h3 {
+  text-transform: none !important;
+}

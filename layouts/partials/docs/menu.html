@@ -19,23 +19,40 @@
   <hr class="book-menu-separator">
 
   <div class="book-menu-projects">
-    <h2><a href="{{ (.Site.GetPage "section" "projects").RelPermalink }}">{{ "PROJECTS" }}</a></h2>
+    <h2><a href="{{ (.Site.GetPage "section" "projects").RelPermalink }}">{{ "Projects" }}</a></h2>
     {{ $projects := where .Site.RegularPages "Section" "projects" }}
     {{ $categories := slice }}
     {{ range $projects }}
-      {{ $cat := .Params.category | default "Uncategorized" }}
-      {{ if not (in $categories $cat) }}
-        {{ $categories = $categories | append $cat }}
+      {{ if and .IsPage (not .IsSection) }}
+        {{ $cat := "Uncategorized" }}
+        {{ if isset .Params "category" }}
+          {{ $cat = .Params.category }}
+        {{ end }}
+        {{ if not (in $categories $cat) }}
+          {{ $categories = $categories | append $cat }}
+        {{ end }}
       {{ end }}
     {{ end }}
     {{ range sort $categories }}
       <div class="book-menu-category">
         <h3>{{ . }}</h3>
         <ul>
-          {{ range sort (where $projects "Params.category" .) "Title" }}
-            <li>
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
+          {{ if eq . "Uncategorized" }}
+            {{ range sort (where $projects "Params.category" nil) "Title" }}
+              {{ if and .IsPage (not .IsSection) }}
+                <li>
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{ range sort (where $projects "Params.category" .) "Title" }}
+              {{ if and .IsPage (not .IsSection) }}
+                <li>
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
           {{ end }}
         </ul>
       </div>
